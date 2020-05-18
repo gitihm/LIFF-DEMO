@@ -44,33 +44,33 @@
   <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
   <script>
      async function shareMsg() {
-      await liff.shareTargetPicker([
-        {
-          type: "text",
-          text: "This message was sent by ShareTargetPicker"
-        }
-      ])
+      // await liff.shareTargetPicker([
+      //   {
+      //     type: "text",
+      //     text: "This message was sent by ShareTargetPicker"
+      //   }
+      // ])
     }
 
     function logOut() {
-      liff.logout()
-      window.location.reload()
+      // liff.logout()
+      // window.location.reload()
     }
 
     function closed() {
-      liff.closeWindow()
+      // liff.closeWindow()
     }
 
     async function scanCode() {
-      const result = await liff.scanCode()
-      document.getElementById("scanCode").append(result.value)
+      // const result = await liff.scanCode()
+      // document.getElementById("scanCode").append(result.value)
     }
     
     function openWindow() {
-      liff.openWindow({
-        url: "https://line.me",
-        external: true
-      })
+      // liff.openWindow({
+      //   url: "https://line.me",
+      //   external: true
+      // })
     }
 
     // async function getFriendship() {
@@ -84,35 +84,35 @@
     // }
 
     async function sendMsg() {
-      if (liff.getContext().type !== "none") {
-        await liff.sendMessages([
-          {
-            "type": "sticker",
-            "stickerId": 1,
-            "packageId": 1
-          }
-        ])
-        alert("Message sent")
-      }
+      // if (liff.getContext().type !== "none") {
+      //   await liff.sendMessages([
+      //     {
+      //       "type": "sticker",
+      //       "stickerId": 1,
+      //       "packageId": 1
+      //     }
+      //   ])
+      //   alert("Message sent")
+      // }
     }
 
     function getContext() {
-      if (liff.getContext() != null) {
-        document.getElementById("type").append(liff.getContext().type)
-        document.getElementById("viewType").append(liff.getContext().viewType)
-        document.getElementById("utouId").append(liff.getContext().utouId)
-        document.getElementById("roomId").append(liff.getContext().roomId)
-        document.getElementById("groupId").append(liff.getContext().groupId)
-      }
+      // if (liff.getContext() != null) {
+      //   document.getElementById("type").append(liff.getContext().type)
+      //   document.getElementById("viewType").append(liff.getContext().viewType)
+      //   document.getElementById("utouId").append(liff.getContext().utouId)
+      //   document.getElementById("roomId").append(liff.getContext().roomId)
+      //   document.getElementById("groupId").append(liff.getContext().groupId)
+      // }
     }
 
     async function getUserProfile() {
-      const profile = await liff.getProfile()
-      document.getElementById("pictureUrl").src = profile.pictureUrl
-      document.getElementById("userId").append(profile.userId)
-      document.getElementById("statusMessage").append(profile.statusMessage)
-      document.getElementById("displayName").append(profile.displayName)
-      document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
+      // const profile = await liff.getProfile()
+      // document.getElementById("pictureUrl").src = profile.pictureUrl
+      // document.getElementById("userId").append(profile.userId)
+      // document.getElementById("statusMessage").append(profile.statusMessage)
+      // document.getElementById("displayName").append(profile.displayName)
+      // document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
     }
     
     function getEnvironment() {
@@ -138,7 +138,7 @@
           getUserProfile()
           getContext()
           // getFriendship()
-          createUniversalLink()
+          // createUniversalLink()
         } else {
           liff.login()
         }
