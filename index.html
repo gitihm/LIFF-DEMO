@@ -13,13 +13,10 @@
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Select someone for send </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
         <div class="modal-body">
+          <p>
+            Select someone for send
+          </p>
           <button id="btnMsg" onclick="sendMsg(52002734)">52002734</button>
           <button id="btnMsg" onclick="sendMsg(52002735)">52002735</button>
           <button id="btnMsg" onclick="sendMsg(52002739)">52002739</button>
@@ -54,7 +51,7 @@
   <p><a href="path/?param=9" id="test">Link to Path</a></p>
 
   <!-- <button id="btnMsg" onclick="sendMsg()">Send Message</button> -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >Send Message</button>
+  <button data-toggle="modal" data-target="#exampleModal" >Send Message</button>
   <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
   <button onclick="openWindow()">Open Window</button>
   <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
