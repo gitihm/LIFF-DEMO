@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF app</title>
-  <link rel="stylesheet" href="css/style.css" media="all">
+  <title>My LIFF App</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <p id="os"><b>OS:</b> </p>
@@ -36,15 +35,12 @@
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <button id="btnClose" onclick="closed()">Close</button>
 
-  <!-- <script src="js/vconsole.min.js"></script> -->
-  <!-- <script>
-    var vConsole = new VConsole()
-    console.log("Hello World!")
-  </script> -->
-
   <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script>
   <script>
-     async function shareMsg() {
+    function createUniversalLink() {
+    }
+
+    async function shareMsg() {
       await liff.shareTargetPicker([
         {
           type: "text",
@@ -144,7 +140,7 @@
           liff.login()
         }
       })
-      await liff.init({ liffId: "1654229653-mDP62aja" })
+      await liff.init({ liffId: "YOUR-LIFF-ID" })
     }
     main()
   </script>
