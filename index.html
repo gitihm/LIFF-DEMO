@@ -24,9 +24,9 @@
   <p id="friendship"><b>isFriendship:</b> </p>
   <p id="scanCode"><b>Code:</b> </p>
   <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
-  <p id="universalLink1"><b>Universal Link:</b> </p>
-  <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
-  <p><a href="path/?param=9">Link to Path</a></p>
+  <!-- <p id="universalLink1"><b>Universal Link:</b> </p> -->
+  <!-- <p id="universalLink2"><b>Universal Link with Query params:</b> </p> -->
+  <p><a href="path/?param=9" id="test">Link to Path</a></p>
 
   <button id="btnMsg" onclick="sendMsg()">Send Message</button>
   <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
@@ -120,6 +120,7 @@
       document.getElementById("isInClient").append(liff.isInClient())
       if (liff.isInClient()) {
         document.getElementById("btnLogOut").style.display = "none"
+        document.getElementById("test").style.display = "none"
       } else {
         document.getElementById("btnMsg").style.display = "none"
         document.getElementById("btnScanCode").style.display = "none"
